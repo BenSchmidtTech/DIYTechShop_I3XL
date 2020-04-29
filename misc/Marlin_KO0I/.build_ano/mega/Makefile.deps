@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+	
+
+
+
+.build_ano/mega/jm_Scheduler/src/jm_Scheduler.cpp.d : /home/patrick/Arduino/libraries/jm_Scheduler/src/jm_Scheduler.cpp
+	@mkdir -p .build_ano/mega/jm_Scheduler/src
+	@/usr/bin/avr-gcc -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=187 -DARDUINO_ARCH_AVR -I/usr/share/arduino/hardware/archlinux-arduino/avr/cores/arduino -ffunction-sections -fdata-sections -g -Os -w -I/usr/share/arduino/hardware/archlinux-arduino/avr/variants/mega -I/usr/share/arduino/hardware/archlinux-arduino/avr/cores/arduino -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/Wire -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/Wire/src -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/Wire/src/utility -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/SoftwareSerial -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/SoftwareSerial/src -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/EEPROM -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/EEPROM/src -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/LiquidTWI2 -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/HID -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/HID/src -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/SPI -I/usr/share/arduino/hardware/archlinux-arduino/avr/libraries/SPI/src -I/home/patrick/Arduino/libraries/Mouse -I/home/patrick/Arduino/libraries/Mouse/src -I/home/patrick/Arduino/libraries/jm_Wire -I/home/patrick/Arduino/libraries/jm_Wire/src -I/home/patrick/Arduino/libraries/jm_Wire/src/utility -I/home/patrick/Arduino/libraries/USBHost -I/home/patrick/Arduino/libraries/USBHost/src -I/home/patrick/Arduino/libraries/jm_Scheduler -I/home/patrick/Arduino/libraries/jm_Scheduler/src -I/home/patrick/Arduino/libraries/LiquidCrystal -I/home/patrick/Arduino/libraries/LiquidCrystal/src -I/home/patrick/Arduino/libraries/U8glib -I/home/patrick/Arduino/libraries/U8glib/src -I/home/patrick/Arduino/libraries/U8glib/src/clib -I/home/patrick/Arduino/libraries/Akafugu_TWILiquidCrystal_Library -I/home/patrick/Arduino/libraries/Keyboard -I/home/patrick/Arduino/libraries/Keyboard/src -I/home/patrick/Arduino/libraries/jm_LiquidCrystal_I2C  -MM $^ > $@
+	
+	@printf ".build_ano/mega/jm_Scheduler/src/jm_Scheduler.cpp.d .build_ano/mega/jm_Scheduler/src/" | cat - $@ > $@~ && mv $@~ $@
+
+
+
+.build_ano/mega/jm_Scheduler/dependencies.d : .build_ano/mega/jm_Scheduler/src/jm_Scheduler.cpp.d
+	@echo [96mScanning dependencies of jm_Scheduler[0m
+	@mkdir -p .build_ano/mega/jm_Scheduler
+	@cat $^ > $@;
+
+all : .build_ano/mega/jm_Scheduler/dependencies.d
+	@true
+
